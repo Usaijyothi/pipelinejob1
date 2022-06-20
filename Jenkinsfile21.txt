@@ -4,10 +4,10 @@ pipeline {
       stage('git-clone') {
           steps {
               sh '''
-              rm -rf G-venkatesh
+              rm -rf Usaijyothi
               pwd
               ls -a -ll
-              git clone https://github.com/venkywonders/G-venkatesh.git
+              git clone https://github.com/Usaijyothi/pipeline.git
               ls -ll
               '''
           }
@@ -18,7 +18,7 @@ pipeline {
               pwd
               cd $WORKSPACE
               ls -ll
-              cd G-venkatesh
+              cd Usaijyothi
               ls -ll
               mvn clean
               mvn compile
@@ -31,7 +31,7 @@ pipeline {
               pwd
               cd $WORKSPACE
               ls -ll
-              cd G-venkatesh
+              cd Usaijyothi
               ls -ll
               mvn test
               '''
@@ -43,7 +43,7 @@ pipeline {
               pwd
               cd $WORKSPACE
               ls -ll
-              cd G-venkatesh
+              cd Usaijyothi
               ls -ll
               mvn sonar:sonar
               '''
@@ -55,7 +55,7 @@ pipeline {
               pwd
               cd $WORKSPACE
               ls -ll
-              cd G-venkatesh
+              cd Usaijyothi
               ls -ll
               mvn package
               '''
